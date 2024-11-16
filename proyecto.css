@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el ancho total */
+    font-family: 'Quicksand', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sección INICIO */
+#inicio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#inicio header {
+    width: 100%;
+}
+#inicio header .contenido-header {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+}
+#inicio header .contenido-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+#inicio header .contenido-header nav ul {
+    display: flex;
+    list-style: none;
+}
+#inicio header .contenido-header .logo {
+    color: #ff8f46;
+    font-size: 22px;
+}
+#inicio header .contenido-header nav ul li {
+    display: inline-block;
+    text-decoration: none;
+    color: #a8a8a8;
+    margin: 0 20px;
+}
+.nav-responsive {
+    font-size: 25px;
+    color: #a8a8a8;
+    display: none;
+}
+#inicio header .contenido-header nav ul li:hover i {
+    color: #ff8f46;
+}
+#inicio header .contenido-header .social a {
+    display: inline-block;
+    background-color: #ff8f46;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+/* CARRUSEL */
+#inicio .carrusel {
+    position: relative;
+    height: 100%;
+}
+#inicio .carrusel .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    color: #fff;
+    text-align: center;
+}
+#inicio .carrusel .info h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+#inicio .carrusel .info button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#inicio .gallery {
+    width: 100%;
+    height: 100%;
+}
+#inicio .gallery-cell {
+    width: 100%;
+    height: 100%;
+}
+#inicio .gallery-cell img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+/* SECCION SABORES */
+#sabores {
+    padding: 50px 0;
+}
+#sabores h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#sabores .fila {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+    max-width: 1100px;
+    margin: auto;
+}
+#sabores .fila .item {
+    display: flex;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 5px;
+    width: calc(33.33% - 20px); /* Ajusta el ancho de los elementos */
+}
+#sabores .fila .item img {
+    max-width: 80px;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+#sabores .fila .item:hover {
+    background-color: #ff8f46;
+}
+#sabores .fila .item .info {
+    margin-left: 15px;
+    font-size: 14px;
+}
+#sabores button {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
+    border: none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* SECCION PLATOS */
+#platos {
+    padding: 50px 0;
+}
+#platos h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#platos .fila {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+    justify-content: center;
+}
+#platos .fila .item {
+    width: calc(33.33% - 20px); /* Ajusta el ancho de los elementos */
+    position: relative;
+    overflow: hidden;
+    margin: 10px; /* Añade margen entre los elementos */
+}
+#platos .fila .item img {
+    width: 100%;
+    display: block;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+#platos .fila .item p {
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    padding: 10px;
+    background-color: #ff8f46;
+    color: #fff;
+    transition: .5s;
+}
+#platos .fila .item:hover p {
+    bottom: 0;
+}
+#platos button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 20px;
+    border: none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* SECCION BLOG */
+#blog {
+    padding: 50px 0;
+}
+#blog h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.galeria-blog {
+    max-width: 800px;
+    margin: 50px auto;
+}
+.galeria-blog .gallery-cell .item{
+    display: flex;
+    align-items: center;
+    margin: 0 80px;
+}
+.galeria-blog .gallery-cell img {
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ff8f46;
+    margin-right: 30px;
+}
+.galeria-blog .gallery-cell h3{
+    margin-bottom: 7px;
+}
+.galeria-blog .gallery-cell p{
+    color: #a8a8a8;
+    font-style: italic;
+}
+#blog button{
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 20px;
+    border: none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#contacto {
+    background-color: #ff8f46; /* Color de fondo para visualizar la sección */
+    border-top: 2px solid #333; /* Borde superior */
+    padding: 40px 0; /* Espaciado */
+}
+
+#contacto .fila {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#contacto .col {
+    flex: 1 1 calc(25% - 20px); /* 4 columnas que ocupan 25% del espacio */
+    box-sizing: border-box;
+}
+
+#contacto h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#contacto a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+#contacto .Media {
+    display: flex;
+    align-items: center;
+}
+
+#contacto .Media i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+#contacto input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contacto input[type="submit"].Enviar {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contacto input[type="submit"].Enviar:hover {
+    background-color: #444;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:1070px){
+    #inicio header .contenido-header .social{
+        display: none;
+    }
+    #inicio header .contenido-header nav{
+        position: static;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width:700){
+    #sabores .fila{
+        display: block;
+    }
+    #sabores .fila .item{
+        width: 100%;
+    }
+    #platos .fila{
+        display: block;
+    }
+    #platos .fila .item{
+        display: block;
+        width: 100%;
+    }
+    #inicio header .contenido-header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    .nav-responsive{
+        display: block;
+    }
+    #inicio header .contenido-header{
+        padding: 20px;
+    }
+    #inicio header .contenido-header nav.responsive{
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #252A2E;
+        z-index: 99;
+    }
+    nav.reponsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+    #contacto .fila{
+        display: block;
+        text-align: center;
+    }
+    #contacto .fila h3{
+        margin: 20px 0 3px 0;
+    }
+    #contacto .fila .Media{
+        display: block;
+    }
+    #contacto .fila input{
+        width: 90%;
+    }
+}
